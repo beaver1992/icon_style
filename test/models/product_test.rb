@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase
   setup do
-    @product = products(:one)
+    @product = FactoryGirl.build(:product)
   end
 
   def assert_false(model)

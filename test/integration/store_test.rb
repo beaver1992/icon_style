@@ -7,9 +7,15 @@ class StoreTest < ActionDispatch::IntegrationTest
 
   test "Anyone can view product" do
     visit root_path
-    within "#product_#{@product.id}" do
-      click_link 'Show', href: "/products/#{@product.id}"
-      assert_equal product_path(@product), current_path
+    within "##{@product.id}" do
+      has_content? @product.name
+      has_content? @product.price
+      has_content? @product.articul
+    end
+
+    within "#content" do
+      find("##{@product.id}").click
+      assert_equal store_path(@product), current_path
     end
   end
 

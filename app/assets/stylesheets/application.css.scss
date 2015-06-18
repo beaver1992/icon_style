@@ -14,6 +14,14 @@
  *= require_self
  */
 
+/* Variables */
+
+$main_width: 60%;
+
+/*--------------------------------------------*/
+
+/* Default settings */
+
 html,
 body {
   height: 100%;
@@ -36,27 +44,67 @@ img {
   padding: 0;
 }
 
+/*--------------------------------------------*/
+
+/* Wrapping */
+
+#wrap {
+  height: auto;
+  margin: 0 auto;
+  min-height: 100%;
+  min-width: 760px;
+  width: $main_width;
+}
+
+#main {
+  display: flex;
+  padding-bottom: 60px;
+}
+
 #header {
-  background: #000000;
   height: 100px;
   margin: 0 auto; 
   position: relative;
-  width: 50%;
+  width: $main_width;
 }
 
-#wrapper {
-  background: #2181cb;
-  margin: 0 auto -50px;
-  min-height: 100%;
-  min-width: 760px;
-  position: relative;
-  width: 50%;
+#side {
+  float: left;
+  width: 30%;
 }
 
 #footer {
-  background: #cccccc;
-  bottom: 0;
+  background: #000000;
+  bottom: 0px;
+  clear: both;
   height: 50px;
-  position: absolute;
-  width: 100%;
+  margin: -50px auto 0;
+  min-width: 760px;
+  position: relative;
+  width: $main_width;
 }
+
+/*--------------------------------------------*/
+
+/* Clearfix-hack */
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+}
+/* Hides from IE-mac \*/
+* html .clearfix { 
+  height: 1%;
+}
+.clearfix {
+  display: block;
+}
+/* End hide from IE-mac */
+
+/*--------------------------------------------*/

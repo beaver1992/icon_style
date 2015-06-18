@@ -2,9 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.product_index {
-  position: absolute;
-  h1 {
-    margin: 15px;
-  }
+#content {
+  margin-left: 10px;
+  width: 100%;
+}
+
+a:hover, a:visited, a:link, a:active {
+  color: #000000;
+  text-decoration: none;
 }

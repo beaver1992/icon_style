@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Faker::Config.locale = 'ru'
+
+Product.destroy_all
+
+10.times do
+  Product.create!(name: Faker::Commerce.product_name,
+                 price: Faker::Commerce.price,
+                 articul: Faker::Number.number(8))
+end
+
+puts "Add #{Product.count} book(s)."

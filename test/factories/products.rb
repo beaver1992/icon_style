@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :product do
-    name "bra"
-    articul "34214abc"
+    sequence(:name) { |i| "bra#{i}" }
+    sequence(:articul) { |i| "articul#{i}" }
     price 123
   end
 end

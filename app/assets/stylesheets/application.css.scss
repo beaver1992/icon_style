@@ -17,6 +17,9 @@
 /* Variables */
 
 $main_width: 60%;
+$footer_height: 500px;
+$about_width: 71%;
+$about_padding: 10px;
 
 /*--------------------------------------------*/
 
@@ -44,6 +47,11 @@ img {
   padding: 0;
 }
 
+h1,
+p {
+  margin: 0;
+}
+
 /*--------------------------------------------*/
 
 /* Wrapping */
@@ -58,11 +66,11 @@ img {
 
 #main {
   display: flex;
-  padding-bottom: 60px;
+  padding-bottom: $footer_height;
 }
 
 #header {
-  height: 100px;
+  height: 500px;
   margin: 0 auto; 
   position: relative;
   width: $main_width;
@@ -70,18 +78,34 @@ img {
 
 #side {
   float: left;
-  width: 30%;
+  width: 15%;
 }
 
 #footer {
-  background: #000000;
   bottom: 0px;
   clear: both;
-  height: 50px;
-  margin: -50px auto 0;
+  height: $footer_height;
+  margin: -$footer_height auto 0;
   min-width: 760px;
   position: relative;
   width: $main_width;
+  .footer_about {
+    padding: 10px 0 10px 13%;
+    .about {
+      background: gray;
+      color: #ffffff;
+      padding: 15px 0;
+      text-align: center;
+    }
+  }
+  .footer_subscribe {
+
+  }
+  .footer_menu {
+    background: #000000;
+    color: #ffffff;
+    padding: 15px 0;
+  }
 }
 
 /*--------------------------------------------*/

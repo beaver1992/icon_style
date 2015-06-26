@@ -71,9 +71,40 @@ p {
 
 #header {
   height: 500px;
-  margin: 0 auto; 
   position: relative;
-  width: $main_width;
+
+  .top_container {
+    /*background-color: red;*/
+    height: 30%;
+    .top_left {
+      float: left;
+      width: 40%;
+    }
+    .top_center {
+      float: left;
+      width: 20%; 
+    }
+    .top_right {
+      float: left;
+      text-align: right;
+      width: 40%;
+    }
+  }
+
+  .header_types {
+    /*background-color: green;*/
+    height: 10%;
+  }
+
+  .slider {
+    /*background-color: blue;*/
+    height: 50%;
+  }
+
+  .alphabetic_brands {
+    /*background-color: purple;*/
+    height: 10%;
+  }
 }
 
 #side {

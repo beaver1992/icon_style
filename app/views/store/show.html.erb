@@ -1,2 +1,8 @@
-<h1>Store#show</h1>
-<p>Find me in app/views/store/show.html.erb</p>
+<div id="content">
+  <h1><%= @product.name %></h1><hr>
+  <h2><%= @product.articul %></h2><hr>
+  <h3><%= @product.price %></h3><hr>
+
+  <%= link_to 'Buy', '#', class: "back-btn" %>
+  <%= link_to 'Back', root_path, class: "back-btn" %>
+</div>

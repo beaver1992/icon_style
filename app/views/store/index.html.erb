@@ -1,12 +1,12 @@
 <div id="content">
   <% @products.each do |product| %>
-    <a id="<%= product.id %>" href="<%= store_path(product) %>">
-      <div class="prodcut">
-        <p>Name: <%= product.name %></p>
-        <p>Price: <%= product.price %></p>
-        <p>Articul: <%= product.articul %></p>
-      </div>
-    </a>
+    <div class="prodcut">
+      <p>Name: <%= product.name %></p>
+      <p>Price: <%= product.price %></p>
+      <p>Articul: <%= product.articul %></p>
+      <%= link_to 'Show', store_path(product) %>
+      <%= link_to 'Buy', '#', class: "back-btn" %>
+    </div>
     <hr>
   <% end %>
 </div>
